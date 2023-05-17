@@ -1,0 +1,13 @@
+DataChad is an open-source project that allows users to ask questions about any data source.
+It leverages embeddings, Deep Lake as a vector database, large language models like GPT-3.5-turbo or GPT-4 and LangChain. 
+
+The data source can be anything from a local file like a pdf or CSV, a website url, 
+a GitHub repository, or even the path to a directory, scanned recursively if the app is deployed locally.
+
+Subsequently, the app detects and loads the data source into text documents, 
+embeds the text documents using OpenAI embeddings, 
+then stores them embeddings as a vector dataset to Activeloop's Deep Lake Cloud. 
+
+A Langchain is established, comprising an LLM model and the embedding database index as a retriever. 
+
+This chain serves as the context for answering user queries over any data they upload.
